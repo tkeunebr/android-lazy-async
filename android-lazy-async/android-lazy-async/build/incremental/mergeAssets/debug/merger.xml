@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="D:\Documents\Projets\android-lazy-async\android-lazy-async\android-lazy-async\src\main\assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="D:\Documents\Projets\android-lazy-async\android-lazy-async\android-lazy-async\src\debug\assets" />
+    </dataSet>
+
+</merger>
