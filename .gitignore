@@ -36,3 +36,4 @@ gen-external-apklibs
 
 # Gradle
 .gradle/
+build/
