@@ -207,10 +207,10 @@ public abstract class AsyncFragment extends Fragment {
     public abstract class FragmentTask<Params, Progress, Result> extends AsyncTask<Params, Progress, Result> {
         @Override
         protected void onPreExecute() {
+            mIsRunning = true;
             if (mCallbacks != null) {
                 mCallbacks.onPreExecute();
             }
-            mIsRunning = true;
         }
 
         @Override
@@ -224,7 +224,6 @@ public abstract class AsyncFragment extends Fragment {
         @Override
         @SuppressWarnings("unchecked")
         protected void onPostExecute(Result result) {
-            mIsRunning = false;
             if (mCallbacks != null) {
                 if (result == null && !mExpectNullResult) {
                     mCallbacks.onError();
@@ -232,6 +231,7 @@ public abstract class AsyncFragment extends Fragment {
                     mCallbacks.onPostExecute(result);
                 }
             }
+            mIsRunning = false;
         }
 
         @Override
