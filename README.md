@@ -48,8 +48,8 @@ It will also need to implement the AsyncCallback interface.
     public class QueryFragment extends Fragment implements AsyncFragment.AsyncCallbacks<Void, Integer> {
     }
 
-overriding the common onPreExecute(), onPostExecute(), etc. callbacks. For convenience, you can use the SimpleAsyncCallbacks
-class and pass a reference to the setCallbacks() method.
+overriding the common onPreExecute(), onPostExecute(), etc. callbacks. You can also use the more convenient SimpleAsyncCallbacks
+class and pass a reference of an instance of this class to the setCallbacks() method.
 
 Finally, you will start your background task by calling
 
